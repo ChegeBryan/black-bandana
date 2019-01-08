@@ -56,6 +56,10 @@ a {
   margin-bottom: 0;
 }
 
+.navbar--collapse {
+  display: none;
+}
+
 .nav__link {
   padding: .5rem 1rem;
 }
@@ -69,8 +73,13 @@ a {
   .navbar__nav {
     flex-direction: row;
   }
+  
   .navbar__nav .nav__link {
     padding-left: .5rem;
     padding-right: .5rem;
+  }
+
+  .navbar--collapse {
+    display: inline-block;
   }
 }
