@@ -55,3 +55,22 @@ a {
   padding-left: 0;
   margin-bottom: 0;
 }
+
+.nav__link {
+  padding: .5rem 1rem;
+}
+
+
+/*
+*  Css to use when diplay is tablet or larger
+*/
+
+@media screen and (min-width: 48rem) {
+  .navbar__nav {
+    flex-direction: row;
+  }
+  .navbar__nav .nav__link {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
