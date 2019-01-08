@@ -32,6 +32,10 @@ a {
  ================================================================= */
 
 .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* center the items to container */
+  justify-content: space-between;
   padding: .5rem 1rem;
 }
 
@@ -42,5 +46,12 @@ a {
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   margin-right: 1rem;
+  white-space: nowrap; /* longer brand names remain unwraped*/
 }
 
+.navbar__nav {
+  display: flex;
+  flex-direction: column; /* vertical aligned on small screens */
+  padding-left: 0;
+  margin-bottom: 0;
+}
