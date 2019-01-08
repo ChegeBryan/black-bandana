@@ -37,6 +37,7 @@ a {
   align-items: center; /* center the items to container */
   justify-content: space-between;
   padding: .5rem 1rem;
+  background: #000;
 }
 
 .nav__brand {
@@ -64,6 +65,22 @@ a {
   padding: .5rem 1rem;
 }
 
+.navbar__link--toggler {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #808080; 
+  background-color: transparent;
+  border: 1px solid #808080;
+  border-radius: .25rem;
+  cursor: pointer; 
+}
+
+.navbar__link--toggler:hover,
+.navbar__link--toggler:focus {
+  text-decoration: none;
+  border: 1px solid #ffffff;
+}
 
 /*
 *  Css to use when diplay is tablet or larger
@@ -73,12 +90,13 @@ a {
   .navbar__nav {
     flex-direction: row;
   }
-  
+  .navbar__link--toggler {
+    display: none;
+  }
   .navbar__nav .nav__link {
     padding-left: .5rem;
     padding-right: .5rem;
   }
-
   .navbar--collapse {
     display: inline-block;
   }
