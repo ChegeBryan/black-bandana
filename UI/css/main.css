@@ -27,6 +27,14 @@ a {
   text-decoration: none;
 }
 
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*===================================================================
 *  Navigation bar
  ================================================================= */
@@ -89,6 +97,7 @@ a {
   border: 1px solid #ffffff;
 }
 
+
 /*
 *  Css to use when diplay is tablet or larger
 */
@@ -106,5 +115,28 @@ a {
   }
   .navbar--collapse {
     display: initial
+  }
+  .container {
+    max-width: 46rem;
+  }
+}
+
+/*
+* CSS media queris for netbook width size and greater
+*/
+
+@media (min-width: 64rem) {
+  .container {
+    max-width: 62rem; 
+  }
+}
+
+/*
+* CSS media queries for notebooks and desktops widths 
+*/
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: 73rem;
   }
 }
