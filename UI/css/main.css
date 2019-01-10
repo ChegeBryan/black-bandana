@@ -1,0 +1,110 @@
+/*
+*  CSS reset user-agent values
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*===================================================================
+*  Navigation bar
+ ================================================================= */
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* center the items to container */
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background: #000;
+}
+
+.nav__brand {
+  color: #808080;
+  font-size: 1.25rem;
+  line-height: inherit;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  margin-right: 1rem;
+  white-space: nowrap; /* longer brand names remain unwraped*/
+}
+
+.navbar__nav {
+  display: flex;
+  flex-direction: column; /* vertical aligned on small screens */
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.navbar--collapse {
+  display: none;
+}
+
+.navbar--collapse-show {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.nav__link {
+  padding: .5rem 0;
+  color: #808080
+}
+
+.navbar__link--toggler {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #808080; 
+  background-color: transparent;
+  border: 1px solid #808080;
+  border-radius: .25rem;
+  cursor: pointer; 
+}
+
+.navbar__link--toggler:hover,
+.navbar__link--toggler:focus {
+  text-decoration: none;
+  border: 1px solid #ffffff;
+}
+
+/*
+*  Css to use when diplay is tablet or larger
+*/
+
+@media (min-width: 48rem) {
+  .navbar__nav {
+    flex-direction: row;
+  }
+  .navbar__link--toggler {
+    display: none;
+  }
+  .navbar__nav .nav__link {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  .navbar--collapse {
+    display: initial
+  }
+}
