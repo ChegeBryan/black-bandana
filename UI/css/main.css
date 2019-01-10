@@ -32,6 +32,7 @@ a {
  ================================================================= */
 
 .navbar {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center; /* center the items to container */
@@ -61,8 +62,14 @@ a {
   display: none;
 }
 
+.navbar--collapse-show {
+  display: flex;
+  flex-basis: 100%;
+}
+
 .nav__link {
-  padding: .5rem 1rem;
+  padding: .5rem 0;
+  color: #808080
 }
 
 .navbar__link--toggler {
@@ -86,7 +93,7 @@ a {
 *  Css to use when diplay is tablet or larger
 */
 
-@media screen and (min-width: 48rem) {
+@media (min-width: 48rem) {
   .navbar__nav {
     flex-direction: row;
   }
@@ -98,6 +105,6 @@ a {
     padding-right: .5rem;
   }
   .navbar--collapse {
-    display: inline-block;
+    display: initial
   }
 }
