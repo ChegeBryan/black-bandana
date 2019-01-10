@@ -47,6 +47,7 @@ a {
   justify-content: space-between;
   padding: .5rem 1rem;
   background: #000;
+  margin-bottom: 30px;
 }
 
 .nav__brand {
@@ -97,6 +98,22 @@ a {
   border: 1px solid #ffffff;
 }
 
+/*=============================================================================
+* Grid system (Flexbox)
+ ========================================================================== */
+
+.container__flex {
+  display: flex;
+  flex-wrap: wrap; /* create another flex line when no enough room */
+}
+
+[class*=flex--col] {
+  width: 100%; /* fill available width */
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
 /*
 *  Css to use when diplay is tablet or larger
