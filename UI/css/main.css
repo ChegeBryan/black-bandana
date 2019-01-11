@@ -113,12 +113,15 @@ a {
   box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
   transition: 0.3s;
 }
-.card__title {
+.card__title, .card__text {
   margin: 0;
 }
 .card__title {
   line-height: 1.2;
   margin-bottom: .5rem;
+}
+.card__text {
+  padding-bottom: .5rem;
 }
 
 
