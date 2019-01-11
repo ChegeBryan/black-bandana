@@ -27,6 +27,14 @@ a {
   text-decoration: none;
 }
 
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*===================================================================
 *  Navigation bar
  ================================================================= */
@@ -39,6 +47,7 @@ a {
   justify-content: space-between;
   padding: .5rem 1rem;
   background: #000;
+  margin-bottom: 30px;
 }
 
 .nav__brand {
@@ -89,6 +98,52 @@ a {
   border: 1px solid #ffffff;
 }
 
+
+/*=============================================================================
+*
+*  Cards
+*
+============================================================================ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  transition: 0.3s;
+}
+.card__title, .card__text {
+  margin: 0;
+}
+.card__title {
+  line-height: 1.2;
+  margin-bottom: .5rem;
+}
+.card__text {
+  padding-bottom: .5rem;
+}
+
+
+
+
+/*=============================================================================
+* Grid system (Flexbox)
+ ========================================================================== */
+
+.container__flex {
+  display: flex;
+  flex-wrap: wrap; /* create another flex line when no enough room */
+}
+
+[class*=flex--col] {
+  width: 100%; /* fill available width */
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /*
 *  Css to use when diplay is tablet or larger
 */
@@ -106,5 +161,46 @@ a {
   }
   .navbar--collapse {
     display: initial
+  }
+  .container {
+    max-width: 46rem;
+  }
+  
+  /* flex widths: 
+  * 1. Items should not grow
+  * 2. item should not shrink
+  * 3. Limit the flex-basis to a max-width
+  */
+  .flex--col-1 {flex: 0 0 8.33%; max-width: 8.33%;}
+  .flex--col-2 {flex: 0 0 16.66%; max-width: 16.66%;}
+  .flex--col-3 {flex: 0 0 25%; max-width: 25%;}
+  .flex--col-4 {flex: 0 0 33.33%; max-width: 33.33%;}
+  .flex--col-5 {flex: 0 0 41.66%; max-width: 41.66%;}
+  .flex--col-6 {flex: 0 0 50%; max-width: 50%;}
+  .flex--col-7 {flex: 0 0 58.33%; max-width: 58.33%;}
+  .flex--col-8 {flex: 0 0 66.66%; max-width: 66.66%;}
+  .flex--col-9 {flex: 0 0 75%; max-width: 75%;}
+  .flex--col-10 {flex: 0 0 83.33%; max-width: 83.33;}
+  .flex--col-11 {flex: 0 0 91.66%; max-width: 91.66%;}
+  .flex--col-12 {flex: 0 0 100%; max-width: 100%;}
+}
+
+/*
+* CSS media queris for netbook width size and greater
+*/
+
+@media (min-width: 64rem) {
+  .container {
+    max-width: 62rem; 
+  }
+}
+
+/*
+* CSS media queries for notebooks and desktops widths 
+*/
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: 73rem;
   }
 }
