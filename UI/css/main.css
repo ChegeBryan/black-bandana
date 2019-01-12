@@ -163,6 +163,7 @@ a {
   background-color: transparent;
   border-radius: .5rem;
   cursor: pointer;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out;
 }
 
 .btn:hover, .btn:focus {
