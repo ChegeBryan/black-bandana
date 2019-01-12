@@ -133,6 +133,18 @@ a {
 .form__component {
   margin-bottom: 1rem;
 }
+.form__input {
+  width: 100%;
+  padding: .625rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  border: 1px solid #000000;
+  border-radius: .5rem;
+  outline: none;
+}
+.form__input:focus {
+  border: 1px solid #808080;
+}
 .hide {
   display: none;
 }
