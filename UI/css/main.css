@@ -160,6 +160,7 @@ a {
 .container__flex {
   display: flex;
   flex-wrap: wrap; /* create another flex line when no enough room */
+  align-items: center; /* center flex lines to cross axis center */
 }
 
 [class*=flex--col] {
