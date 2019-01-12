@@ -122,6 +122,11 @@ a {
 .card__text {
   padding-bottom: .5rem;
 }
+.card__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 
 /*============================================================================
