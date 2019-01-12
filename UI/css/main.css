@@ -112,6 +112,9 @@ a {
   box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
   transition: 0.3s;
 }
+.card--color {
+  background-color: #ffffff;
+}
 .card__title, .card__text {
   margin: 0;
 }
