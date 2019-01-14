@@ -235,6 +235,18 @@ hr {
   margin-bottom: 1rem;
 }
 
+.position--rv {
+  position: relative;
+}
+
+/* password toggler eye positioning */
+.password-toggle {
+  color: #9D678D;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
 
 /*
 * Css to apply on mobile only
