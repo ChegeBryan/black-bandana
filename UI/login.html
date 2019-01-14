@@ -34,6 +34,31 @@
     </div>
   </nav>
 
+  <div class="container">
+    <!--flex container row-->
+    <div class="container__flex">
+      <!--flex items-->
+      <div class="flex--col-4">
+        <div class="card card--color">
+          <form>
+            <div class="form__component">
+              <label for="user_email" class="hide">Email: </label>
+              <input type="email" class="form__input" id="user_email" placeholder="Email" required>
+            </div>
+            <div class="form__component">
+              <label for="pwd" class="hide">Password: </label>
+              <input type="password" class="form__input" id="pwd" placeholder="Password" required>
+            </div>
+
+            <div class="card__actions">
+              <button type="submit" class="btn btn--block">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 
 </body>
