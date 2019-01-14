@@ -50,7 +50,6 @@ a {
   align-items: center; /* center the items to container */
   justify-content: space-between;
   padding: .5rem 1rem;
-  background: #000;
   margin-bottom: 30px;
 }
 
