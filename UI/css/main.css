@@ -90,6 +90,7 @@ a {
   color: #808080; 
   background-color: transparent;
   border: 1px solid #808080;
+  outline: none;
   border-radius: .25rem;
   cursor: pointer; 
 }
@@ -97,7 +98,8 @@ a {
 .navbar__link--toggler:hover,
 .navbar__link--toggler:focus {
   text-decoration: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #FF006C;
+  color: #FF006C;
 }
 
 /*
