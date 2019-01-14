@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -27,12 +28,19 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
 
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.body--bg {
+  background-color: #4A00A4;
 }
 
 /*===================================================================
@@ -46,7 +54,6 @@ a {
   align-items: center; /* center the items to container */
   justify-content: space-between;
   padding: .5rem 1rem;
-  background: #000;
   margin-bottom: 30px;
 }
 
@@ -78,7 +85,6 @@ a {
 
 .nav__link {
   padding: .5rem 0;
-  color: #808080
 }
 
 .navbar__link--toggler {
@@ -88,6 +94,7 @@ a {
   color: #808080; 
   background-color: transparent;
   border: 1px solid #808080;
+  outline: none;
   border-radius: .25rem;
   cursor: pointer; 
 }
@@ -95,14 +102,29 @@ a {
 .navbar__link--toggler:hover,
 .navbar__link--toggler:focus {
   text-decoration: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #FF006C;
+  color: #FF006C;
+}
+
+/*
+* Theme the navbar
+*/
+
+.navbar__brand--color {
+  color: #FF006C;
+}
+
+.nav__link, .navbar__link--toggler {
+  color: #fff;
+}
+
+.nav__link:hover {
+  color: #FF006C;
 }
 
 
 /*=============================================================================
-*
 *  Cards
-*
 ============================================================================ */
 
 .card {
@@ -112,6 +134,12 @@ a {
   border-radius: .5rem;
   box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
   transition: 0.3s;
+}
+.card--color {
+  background-color: #ffffff;
+}
+.card__title {
+  color: #9D678D;
 }
 .card__title, .card__text {
   margin: 0;
@@ -123,8 +151,60 @@ a {
 .card__text {
   padding-bottom: .5rem;
 }
+.card__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 
+/*============================================================================
+*  Forms and buttons.
+* ========================================================================= */
+
+.form__component {
+  margin-bottom: 1rem;
+}
+.form__input {
+  width: 100%;
+  padding: .625rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  border: 1px solid #9D678D;
+  border-radius: .5rem;
+  outline: none;
+}
+.form__input:focus {
+  border: 1px solid #5C2C68;
+}
+.hide {
+  display: none;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: .625rem;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background-color: #FF006C;
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out,
+  box-shadow .15s ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+  outline: 0;
+  background-color: #9D678D;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19); 
+}
+.btn--block {
+  flex: 0 0 100%;
+}
 
 
 /*=============================================================================
@@ -134,6 +214,8 @@ a {
 .container__flex {
   display: flex;
   flex-wrap: wrap; /* create another flex line when no enough room */
+  align-items: center; /* center flex lines to cross axis center */
+  justify-content: center; /* Center flex items on container */
 }
 
 [class*=flex--col] {
@@ -142,6 +224,19 @@ a {
   padding-right: 16px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+
+/*
+* Css to apply on mobile only
+*/
+@media (max-width: 48rem) {
+  .hide-sm {
+    display: none;
+  }
+  .navbar {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.19);
+  }
 }
 
 /*
@@ -161,6 +256,9 @@ a {
   }
   .navbar--collapse {
     display: initial
+  }
+  .hide-md {
+    display: none;
   }
   .container {
     max-width: 46rem;
