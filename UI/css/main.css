@@ -170,12 +170,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: .625rem;
   font-size: 1rem;
   line-height: 1.2;
-  border: 1px solid #000000;
+  border: 1px solid #9D678D;
   border-radius: .5rem;
   outline: none;
 }
 .form__input:focus {
-  border: 1px solid #808080;
+  border: 1px solid #5C2C68;
 }
 .hide {
   display: none;
