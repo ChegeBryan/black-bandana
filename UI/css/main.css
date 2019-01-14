@@ -35,6 +35,9 @@ a {
   margin-right: auto;
 }
 
+.body--bg {
+  background-color: #4A00A4;
+}
 
 /*===================================================================
 *  Navigation bar
