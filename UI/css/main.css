@@ -189,7 +189,8 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   text-decoration: none;
   border: 1px solid transparent;
-  background-color: transparent;
+  background-color: #FF006C;
+  color: #fff;
   border-radius: .5rem;
   cursor: pointer;
   transition: color .15s ease-in-out, background-color .15s ease-in-out,
@@ -198,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn:hover, .btn:focus {
   outline: 0;
-  background-color: #d8d8d8;
+  background-color: #9D678D;
   box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19); 
 }
 .btn--block {
