@@ -138,6 +138,9 @@ h1, h2, h3, h4, h5, h6 {
 .card--color {
   background-color: #ffffff;
 }
+.card__title {
+  color: #9D678D;
+}
 .card__title, .card__text {
   margin: 0;
 }
