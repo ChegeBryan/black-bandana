@@ -14,7 +14,62 @@
 </head>
 
 <body class="body--bg">
+  <nav class="container navbar">
+    <!--Project name in navigation bar-->
+    <a href="index.html" class="nav__brand navbar__brand--color">Black Bandana</a>
 
+    <!-- Navbar link toggle button -->
+    <button type="button" class="navbar__link--toggler" onclick="toggleNavlink()"><i class="fas fa-bars"></i></button>
+
+    <!--Navigation bar links-->
+    <div class="navbar--collapse">
+      <ul class="navbar__nav">
+        <li>
+          <a href="index.html" class="nav__link">Home</a>
+        </li>
+        <li>
+          <a href="#" class="nav__link">Sign In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="contianer">
+    <!--flex container row-->
+    <div class="container__flex">
+      <!--flex items-->
+      <div class="flex--col-4">
+          <div class="card card--color">
+            <form>
+              <div class="form__component">
+                <label for="username" class="hide">Username: </label>
+                <input type="text" class="form__input" id="username" placeholder="Username" required>
+              </div>
+              <div class="form__component">
+                <label for="user_email" class="hide">Email: </label>
+                <input type="email" class="form__input" id="user_email" placeholder="Email" required>
+              </div>
+              <div class="form__component">
+                <label for="pwd" class="hide">Password: </label>
+                <input type="password" class="form__input" id="pwd" placeholder="Password" required>
+              </div>
+              <div class="form__component">
+                <label for="pwd_confirm" class="hide">Confirm Password: </label>
+                <input type="password"  class="form__input" id="pwd_confirm" placeholder="Confirm password" required>
+              </div>
+    
+              <div class="card__actions">
+                <button type="submit" class="btn btn--block">Create account</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>

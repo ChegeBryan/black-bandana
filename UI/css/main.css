@@ -215,6 +215,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-wrap: wrap; /* create another flex line when no enough room */
   align-items: center; /* center flex lines to cross axis center */
+  justify-content: center; /* Center flex items on container */
 }
 
 [class*=flex--col] {
