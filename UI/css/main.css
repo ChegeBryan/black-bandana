@@ -256,6 +256,9 @@ h1, h2, h3, h4, h5, h6 {
   .navbar--collapse {
     display: initial
   }
+  .hide-md {
+    display: none;
+  }
   .container {
     max-width: 46rem;
   }
