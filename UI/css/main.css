@@ -81,7 +81,6 @@ a {
 
 .nav__link {
   padding: .5rem 0;
-  color: #808080
 }
 
 .navbar__link--toggler {
@@ -99,6 +98,22 @@ a {
 .navbar__link--toggler:focus {
   text-decoration: none;
   border: 1px solid #ffffff;
+}
+
+/*
+* Theme the navbar
+*/
+
+.navbar__brand--color {
+  color: #FF006C;
+}
+
+.nav__link, .navbar__link--toggler {
+  color: #fff;
+}
+
+.nav__link:hover {
+  color: #FF006C;
 }
 
 
