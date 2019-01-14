@@ -32,6 +32,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
