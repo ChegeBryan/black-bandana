@@ -26,10 +26,19 @@ ul {
 
 a {
   text-decoration: none;
+  color: #9D678D;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
+}
+
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -226,6 +235,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+.position--rv {
+  position: relative;
+}
+
+/* password toggler eye positioning */
+.password-toggle {
+  color: #9D678D;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
 
 /*
 * Css to apply on mobile only

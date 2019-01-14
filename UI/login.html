@@ -6,7 +6,7 @@
   <meta name="description" content="Front-end UI for black bandana user authentication using tokens in web API">
   <meta name="author" content="Chege Bryan">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black-Bandana | Home</title>
+  <title>Black-Bandana | Sign in</title>
   <link href="https://fonts.googleapis.com/css?family=Work+Sans|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
@@ -14,10 +14,9 @@
 </head>
 
 <body class="body--bg">
-
   <nav class="container navbar">
     <!--Project name in navigation bar-->
-    <a href="#" class="nav__brand navbar__brand--color">Black Bandana</a>
+    <a href="index.html" class="nav__brand navbar__brand--color">Black Bandana</a>
 
     <!-- Navbar link toggle button -->
     <button type="button" class="navbar__link--toggler" onclick="toggleNavlink()"><i class="fas fa-bars"></i></button>
@@ -26,7 +25,7 @@
     <div class="navbar--collapse">
       <ul class="navbar__nav">
         <li>
-          <a href="login.html" class="nav__link">Sign In</a>
+          <a href="index.html" class="nav__link">Home</a>
         </li>
         <li>
           <a href="signup.html" class="nav__link">Sign Up</a>
@@ -39,51 +38,35 @@
     <!--flex container row-->
     <div class="container__flex">
       <!--flex items-->
-      <div class="flex--col-7">
-        <div class="card card--color">
-          <h1 class="card__title">Home is best all times.</h1>
-          <p class="card__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt porttitor leo ut scelerisque.
-            Donec lacus nisi, finibus non imperdiet et, tempus in lectus. Donec non purus tristique, viverra diam in,
-            volutpat leo. Suspendisse rutrum pharetra tempor. Mauris consectetur erat ac mauris rhoncus ultricies.
-            Vestibulum ornare, metus vitae tempus suscipit, dolor orci aliquet sapien, in placerat arcu orci pulvinar
-            massa. Duis sit amet arcu at mi placerat bibendum.
-          </p>
-          <div class="card__actions hide-md">
-            <a href="signup.html" class="btn">Sign up now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sign up forrm -->
-      <div class="flex--col-5 hide-sm">
+      <div class="flex--col-4">
         <div class="card card--color">
           <form>
-            <div class="form__component">
-              <label for="username" class="hide">Username: </label>
-              <input type="text" class="form__input" id="username" placeholder="Username" required>
-            </div>
             <div class="form__component">
               <label for="user_email" class="hide">Email: </label>
               <input type="email" class="form__input" id="user_email" placeholder="Email" required>
             </div>
-            <div class="form__component">
+            <div class="form__component position--rv">
               <label for="pwd" class="hide">Password: </label>
               <input type="password" class="form__input" id="pwd" placeholder="Password" required>
-            </div>
-            <div class="form__component">
-              <label for="pwd_confirm" class="hide">Confirm Password: </label>
-              <input type="password"  class="form__input" id="pwd_confirm" placeholder="Confirm password" required>
+              <i class="fa fa-eye fa-lg password-toggle" onmouseover="showPassword()" onmouseout="hidePassword()"></i>
             </div>
 
             <div class="card__actions">
-              <button type="submit" class="btn btn--block">Create account</button>
+              <button type="submit" class="btn btn--block">Sign in</button>
             </div>
+            
+            <hr>
+
+            <div class="container__flex">
+              <p>We love guests</p>&nbsp;<a href="signup.html" class> Sign up now</a>
+            </div>
+
           </form>
         </div>
       </div>
     </div>
   </div>
+
   <script src="js/main.js"></script>
 
 </body>
