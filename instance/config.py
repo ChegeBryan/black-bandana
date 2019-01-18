@@ -16,3 +16,9 @@ class DevelopmentConfig(Config):
     """ Modify Environment variables for development """
     DEBUG = True
 
+
+class ProductionConfig(Config):
+    """ Modify environment variable for production """
+    DEBUG = False
+    TESTING = False
+
