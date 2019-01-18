@@ -12,4 +12,7 @@ class Config:
     SECRET = os.getenv('SECRET', 'my_precious_gollum')
 
 
+class DevelopmentConfig(Config):
+    """ Modify Environment variables for development """
+    DEBUG = True
 
