@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ChegeBryan/black-bandana.svg?branch=develop)](https://travis-ci.org/ChegeBryan/black-bandana)
 # black-bandana
 user authentication using JSON Web Tokens in Flask Web API
 
