@@ -12,3 +12,9 @@ class TestConfig(unittest.TestCase):
     def test_app_environment_development(self):
         app = create_app('development')
         self.assertTrue(app.config['DEBUG'] is True)
+
+    def test_app_environment_production(self):
+        app = create_app('production')
+        self.assertFalse(app.config['DEBUG'] is True)
+        self.assertFalse(app.config['TESTING'] is True)
+
