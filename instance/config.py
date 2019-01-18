@@ -22,3 +22,8 @@ class ProductionConfig(Config):
     DEBUG = False
     TESTING = False
 
+
+class TestingConfig(Config):
+    """ Modify environment variables for testing """
+    DEBUG = True
+    TESTING = True
