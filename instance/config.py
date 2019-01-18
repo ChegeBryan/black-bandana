@@ -27,3 +27,10 @@ class TestingConfig(Config):
     """ Modify environment variables for testing """
     DEBUG = True
     TESTING = True
+
+
+config_environment = {
+    'development': DevelopmentConfig,
+    'production': ProductionConfig,
+    'testing': TestingConfig
+}
