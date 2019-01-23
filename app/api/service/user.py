@@ -19,6 +19,11 @@ def save_new_user(data):
     )
 
     save_changes(new_user)
+    response_object = {
+        "message": "Successfully registered!",
+        "user": new_user.display_user_holder()
+    }
+    return response_object, 201
 
 
 def save_changes(data):
