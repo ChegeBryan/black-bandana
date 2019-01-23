@@ -28,3 +28,8 @@ class User:
     def generate_password_hash(cls, password):
         """ Method to encrypt password """
         return sha256.hash(password)
+    
+    @classmethod
+    def verify_hash_password(cls, password, hash):
+        """  Method to decrypt password """
+        return sha256.verify(password, hash)    
