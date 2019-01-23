@@ -3,11 +3,13 @@
 from app.api.db.mock_db import MockDB
 
 
-def save_new_user():
+def save_new_user(data):
     """
     Save new user function 
     """
     pass
 
-def save_changes():
-    pass
+    
+
+def save_changes(data):
+    MockDB.USERS.append(data)
