@@ -20,4 +20,7 @@ class BaseTestData(unittest.TestCase):
         self.null_username_holder = self.null_username.display_user_holder()
         self.malformed_email = User(user_name='name', user_email='anoy.com', password='password21')
         self.malformed_email_holder = self.malformed_email.display_user_holder()
+        self.null_password = User(user_name='name', user_email='anonymous@gma.com', password='')
+        self.null_password_holder = self.null_password.display_user_holder()
+        
 
