@@ -43,6 +43,7 @@ class TestUserModel(unittest.TestCase):
         test_user = User('anonymous2', 'anonymous2@gmail.com', 'password')
         save_changes(test_user)
         self.assertEqual(len(MockDB.USERS), 2)
-
-
+    
+    def tearDown(self):
+        MockDB.USERS[:] = []
 
