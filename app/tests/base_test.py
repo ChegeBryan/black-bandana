@@ -4,6 +4,7 @@ import unittest
 
 from app import create_app
 from app.api.model.user import User
+from app.api.db.mock_db import MockDB
 
 
 class BaseTestData(unittest.TestCase):
@@ -28,4 +29,7 @@ class BaseTestData(unittest.TestCase):
         self.int_username_holder = self.int_username.display_user_holder()
         self.password_length = User(user_name='name', user_email='anonymous@gm.com', password='passw')
         self.password_length_holder = self.password_length.display_user_holder()
+
+    def tearDown(self):
+        MockDB.USERS[:] = []
 
