@@ -20,4 +20,14 @@ class TestUserModel(unittest.TestCase):
             'anonymous@anony.com',
             'password'
         )
+    
+    def test_user_object_creation(self):
+        """ 
+        test user object is initialized properly
+        """
+        self.assertTrue(self.new_user.user_id)
+        self.assertEqual(self.new_user.user_name, 'anonymous')
+        self.assertEqual(self.new_user.user_email, 'anonymous@anony.com')
+        self.assertEqual(self.new_user.password, 'password')
+
 
