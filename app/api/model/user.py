@@ -27,4 +27,7 @@ class User:
     def password(self):
         raise AttributeError('Password: I only read but dont read.')
     
+    @password.setter
+    def password(self, password):
+        self.password_hash = generate_password_hash(password)
     
