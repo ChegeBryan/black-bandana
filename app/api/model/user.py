@@ -2,6 +2,8 @@
 
 import uuid
 
+from passlib.hash import pbkdf2_sha256 as sha256
+
 
 class User:
     """
@@ -21,4 +23,8 @@ class User:
             'user_email': self.user_email,
             'password': self.password
         }
-    
+
+    @classmethod
+    def generate_password_hash(cls, password):
+        """ Method to encrypt password """
+        return sha256.hash(password)
