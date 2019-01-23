@@ -18,6 +18,7 @@ def save_new_user(data):
         password=password
     )
 
+    save_changes(new_user)
 
 
 def save_changes(data):
