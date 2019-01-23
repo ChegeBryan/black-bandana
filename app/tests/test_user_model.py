@@ -36,5 +36,13 @@ class TestUserModel(unittest.TestCase):
         """ Test user is saved on USERS list """
         save_changes(self.new_user)
         self.assertEqual(len(MockDB.USERS), 1)
+    
+    def test_multple_users_are_saved(self):
+        """ Test multiple users are saved in USERS list"""
+        save_changes(self.new_user)
+        test_user = User('anonymous2', 'anonymous2@gmail.com', 'password')
+        save_changes(test_user)
+        self.assertEqual(len(MockDB.USERS), 2)
+
 
 
