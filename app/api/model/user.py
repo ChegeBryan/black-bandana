@@ -2,7 +2,6 @@
 
 import uuid
 
-from werkzeug.security import generate_password_hash
 
 class User:
     """
@@ -22,12 +21,4 @@ class User:
             'user_email': self.user_email,
             'password': self.password
         }
-    
-    @property
-    def password(self):
-        raise AttributeError('Password: I only read but dont read.')
-    
-    @password.setter
-    def password(self, password):
-        self.password_hash = generate_password_hash(password)
     

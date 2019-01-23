@@ -29,5 +29,3 @@ class TestUserModel(unittest.TestCase):
         self.assertEqual(self.new_user.user_name, 'anonymous')
         self.assertEqual(self.new_user.user_email, 'anonymous@anony.com')
         self.assertEqual(self.new_user.password, 'password')
-
-
