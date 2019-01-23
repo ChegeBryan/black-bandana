@@ -26,6 +26,6 @@ class BaseTestData(unittest.TestCase):
         self.null_user_entries_holder = self.null_user_entries.display_user_holder()
         self.int_username = User(user_name=3222, user_email='anonymous@gam.com', password='password23')
         self.int_username_holder = self.int_username.display_user_holder()
-        
-
+        self.password_length = User(user_name='name', user_email='anonymous@gm.com', password='passw')
+        self.password_length_holder = self.password_length.display_user_holder()
 
