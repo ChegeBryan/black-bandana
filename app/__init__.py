@@ -30,6 +30,6 @@ def create_app(config_name):
 
     # add user namespace to the namespaces and define the prefix url
     api.add_namespace(user_ns, path='api/v1')
+    app.register_blueprint(blueprint)
 
     return app
-
