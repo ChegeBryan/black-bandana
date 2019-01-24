@@ -17,4 +17,5 @@ class Users(Resource):
     User resource for the API
     """
     @api.doc('Create a new user')
-    
+    @api.expect(_user, validate=True)
+
