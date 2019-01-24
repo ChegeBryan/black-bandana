@@ -3,6 +3,7 @@
 from .base_test import BaseTestData
 
 
+
 class UserAPITestCase(BaseTestData):
     """
     Class testing user api which inherits from the BaseTestData class
@@ -15,7 +16,7 @@ class UserAPITestCase(BaseTestData):
         """
         self.client = self.app.test_client()
         response = self.client.post(
-            'api/v1/users',
+            '/api/v1/users',
             json=self.user_holder
         )
         self.assertEqual(response.status_code, 201)
