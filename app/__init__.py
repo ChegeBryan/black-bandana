@@ -9,7 +9,7 @@ from flask_restplus import Api
 
 
 from instance.config import config_environment
-from api.controller.user_controller import api as user_ns
+from .api.controller.user_controller import api as user_ns
 
 def create_app(config_name):
     """
