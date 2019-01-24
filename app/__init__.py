@@ -5,6 +5,7 @@ creation of application factory
 
 from flask import Flask
 from flask import Blueprint
+from flask_restplus import Api
 
 
 from instance.config import config_environment
@@ -20,6 +21,12 @@ def create_app(config_name):
     app.config.from_object(config_environment[config_name])
     
     blueprint = Blueprint('api', __name__)
+
+    api = Api(blueprint, 
+        title="Black Bandana Authorization RESTful API with JWT",
+        version="1.0",
+        description="A RESTful API built with Flask"
+    ) 
 
     return app
 
