@@ -18,4 +18,6 @@ class Users(Resource):
     """
     @api.doc('Create a new user')
     @api.expect(_user, validate=True)
+    @api.response(201, 'Successfully registered user')
+    
 
