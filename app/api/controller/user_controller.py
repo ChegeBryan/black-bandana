@@ -16,4 +16,5 @@ class Users(Resource):
     """
     User resource for the API
     """
-    pass
+    @api.doc('Create a new user')
+    
