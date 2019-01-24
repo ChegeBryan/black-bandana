@@ -9,7 +9,7 @@ from flask_restplus import Api
 
 
 from instance.config import config_environment
-
+from api.controller.user_controller import api as user_ns
 
 def create_app(config_name):
     """
@@ -27,6 +27,9 @@ def create_app(config_name):
         version="1.0",
         description="A RESTful API built with Flask"
     ) 
+
+    # add user namespace to the namespaces and define the prefix url
+    api.add_namespace(user_ns, path='api/v1')
 
     return app
 
