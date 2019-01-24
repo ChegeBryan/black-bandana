@@ -19,5 +19,8 @@ class Users(Resource):
     @api.doc('Create a new user')
     @api.expect(_user, validate=True)
     @api.response(201, 'Successfully registered user')
-    
+    def post(self):
+        """ Create new user post method """
+        data = request.get_json()
+        return save_new_user(data=data)
 
