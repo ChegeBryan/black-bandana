@@ -39,3 +39,16 @@ class UserAPITestCase(BaseTestData):
         )
         self.assertEqual(response_2.status_code, 409)
 
+
+    def test_api_return_error_null_username(self):
+        """
+        Test api returns correct error code on attempt to register
+        user with no username
+        : return STATUS CODE 400 Bad Request
+        """
+        self.client = self.app.test_client()
+        response = self.client.post(
+            '/api/v1/users',
+            json=self.null_username_holder
+        )
+        self.assertEqual(response.status_code, 400)
