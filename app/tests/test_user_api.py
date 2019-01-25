@@ -52,3 +52,16 @@ class UserAPITestCase(BaseTestData):
             json=self.null_username_holder
         )
         self.assertEqual(response.status_code, 400)
+
+    def test_api_return_error_null_password(self):
+        """
+        Test api returns correct error code on attempt to register
+        user with no password
+        : return STATUS CODE 400 Bad Request
+        """
+        self.client = self.app.test_client()
+        response = self.client.post(
+            '/api/v1/users',
+            json=self.null_password_holder
+        )
+        self.assertEqual(response.status_code, 400)
