@@ -6,7 +6,7 @@ from app.api.model.user import User
 
 def save_new_user(data):
     """
-    Save new user function 
+    Save new user function
     """
     username =  data['user_name']
     user_email = data['user_email']

@@ -100,12 +100,12 @@ hr {
   padding: .25rem .75rem;
   font-size: 1.25rem;
   line-height: 1;
-  color: #808080; 
+  color: #808080;
   background-color: transparent;
   border: 1px solid #808080;
   outline: none;
   border-radius: .25rem;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .navbar__link--toggler:hover,
@@ -209,7 +209,7 @@ hr {
 .btn:hover, .btn:focus {
   outline: 0;
   background-color: #9D678D;
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19); 
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 }
 .btn--block {
   flex: 0 0 100%;
@@ -284,8 +284,8 @@ hr {
   .container {
     max-width: 46rem;
   }
-  
-  /* flex widths: 
+
+  /* flex widths:
   * 1. Items should not grow
   * 2. item should not shrink
   * 3. Limit the flex-basis to a max-width
@@ -310,12 +310,12 @@ hr {
 
 @media (min-width: 64rem) {
   .container {
-    max-width: 62rem; 
+    max-width: 62rem;
   }
 }
 
 /*
-* CSS media queries for notebooks and desktops widths 
+* CSS media queries for notebooks and desktops widths
 */
 
 @media (min-width: 75rem) {
