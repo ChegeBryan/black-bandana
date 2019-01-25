@@ -104,3 +104,16 @@ class UserAPITestCase(BaseTestData):
             json=self.null_user_entries_holder
         )
         self.assertEqual(response.status_code, 400)
+
+    def test_api_return_error_int_user_name(self):
+        """
+        Test api returns correct error code on attempt to register
+        user with numbers as username
+        : return STATUS CODE 400 Bad Request
+        """
+        self.client = self.app.test_client()
+        response = self.client.post(
+            '/api/v1/users',
+            json=self.int_username_holder
+        )
+        self.assertEqual(response.status_code, 400)
