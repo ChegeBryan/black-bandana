@@ -91,3 +91,16 @@ class UserAPITestCase(BaseTestData):
             json=self.null_email_holder
         )
         self.assertEqual(response.status_code, 400)
+
+    def test_api_return_error_null_user_entries(self):
+        """
+        Test api returns correct error code on attempt to register
+        user with empty username, email and password fields
+        : return STATUS CODE 400 Bad Request
+        """
+        self.client = self.app.test_client()
+        response = self.client.post(
+            '/api/v1/users',
+            json=self.null_user_entries_holder
+        )
+        self.assertEqual(response.status_code, 400)
