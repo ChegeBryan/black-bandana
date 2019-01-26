@@ -121,8 +121,8 @@ class UserAPITestCase(BaseTestData):
 
     def test_api_return_error_int_user_name(self):
         """
-        Test api returns correct error code on attempt to register
-        user with numbers as username
+        Test api returns correct error code and error message on attempt to
+        register user with numbers as username
         : return STATUS CODE 400 Bad Request
         """
         self.client = self.app.test_client()
@@ -130,6 +130,8 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.int_username_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["error"] == "Username cannot be a number")
         self.assertEqual(response.status_code, 400)
 
     def test_api_return_error_invalid_password_length(self):
