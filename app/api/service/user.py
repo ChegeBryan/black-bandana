@@ -8,8 +8,8 @@ def save_new_user(data):
     """
     Save new user function
     """
-    username =  data['user_name'],
-    user_email = data['user_email'],
+    username =  data['user_name']
+    user_email = data['user_email']
     password = data['password']
 
     # check if the data provided in the payload is valid
@@ -26,6 +26,11 @@ def save_new_user(data):
     elif "password" in data and not data["password"].strip():
         return {
             "error": "Password cannot be empty"
+        }, 400
+    # check if the username provided is numbers only
+    elif username.isnumeric():
+        return {
+            "error": "Username cannot be a number"
         }, 400
     else:
         new_user = User(
