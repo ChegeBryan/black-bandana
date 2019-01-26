@@ -39,6 +39,8 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.user_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["error"] == "Try a different email and username combination")
         self.assertEqual(response_2.status_code, 409)
 
 
