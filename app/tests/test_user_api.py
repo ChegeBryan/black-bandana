@@ -136,8 +136,8 @@ class UserAPITestCase(BaseTestData):
 
     def test_api_return_error_invalid_password_length(self):
         """
-        Test api returns correct error code on attempt to register
-        user with empty username, email and password fields
+        Test api returns correct error code and error message attempt to
+        register user with invalid password length
         : return STATUS CODE 400 Bad Request
         """
         self.client = self.app.test_client()
@@ -145,4 +145,6 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.password_length_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["error"] == "Password must be between 8 to 16 characters")
         self.assertEqual(response.status_code, 400)
