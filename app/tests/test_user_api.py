@@ -1,7 +1,7 @@
 """ Tests for user api """
 
 from .base_test import BaseTestData
-
+import json
 
 
 class UserAPITestCase(BaseTestData):
@@ -11,7 +11,7 @@ class UserAPITestCase(BaseTestData):
 
     def test_api_can_create_new_user(self):
         """
-        use the test_client
+        Test api return success message on success registration
         : return STATUS CODE 201 OK Created
         """
         self.client = self.app.test_client()
@@ -19,6 +19,8 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.user_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["message"] == "Successfully registered!")
         self.assertEqual(response.status_code, 201)
 
     def test_api_cannot_register_duplicate_user(self):
