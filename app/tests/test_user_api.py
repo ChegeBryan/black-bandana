@@ -46,8 +46,8 @@ class UserAPITestCase(BaseTestData):
 
     def test_api_return_error_null_username(self):
         """
-        Test api returns correct error code on attempt to register
-        user with no username
+        Test api returns correct error code and response message on attempt to
+        register user with no username
         : return STATUS CODE 400 Bad Request
         """
         self.client = self.app.test_client()
@@ -55,6 +55,8 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.null_username_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["error"] == "Username cannot be empty")
         self.assertEqual(response.status_code, 400)
 
     def test_api_return_error_null_password(self):
