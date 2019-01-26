@@ -1,7 +1,6 @@
 """ Tests for user api """
 
 from .base_test import BaseTestData
-import json
 
 
 class UserAPITestCase(BaseTestData):
