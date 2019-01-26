@@ -1,5 +1,7 @@
 """ Methods for data manipulation in the Mock db """
 
+import re
+
 from app.api.db.mock_db import MockDB
 from app.api.model.user import User
 
@@ -31,6 +33,11 @@ def save_new_user(data):
     elif username.isnumeric():
         return {
             "error": "Username cannot be a number"
+        }, 400
+    # check if the email provided follows email format
+    elif not re.match(r'[^@]+@[^@]+\.[^@]+', user_email):
+        return {
+            "error": "Invalid email format"
         }, 400
     else:
         new_user = User(
