@@ -19,14 +19,14 @@ def create_app(config_name):
     """
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_environment[config_name])
-    
+
     blueprint = Blueprint('api', __name__)
 
-    api = Api(blueprint, 
+    api = Api(blueprint,
         title="Black Bandana Authorization RESTful API with JWT",
         version="1.0",
         description="A RESTful API built with Flask"
-    ) 
+    )
 
     # add user namespace to the namespaces and define the prefix url
     api.add_namespace(user_ns, path='/api/v1')
