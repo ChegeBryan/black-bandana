@@ -23,6 +23,10 @@ def save_new_user(data):
         return {
             "error": "Email cannot be empty"
         }, 400
+    elif "password" in data and not data["password"].strip():
+        return {
+            "error": "Password cannot be empty"
+        }, 400
     else:
         new_user = User(
             user_name=username,
