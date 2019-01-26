@@ -61,8 +61,8 @@ class UserAPITestCase(BaseTestData):
 
     def test_api_return_error_null_password(self):
         """
-        Test api returns correct error code on attempt to register
-        user with no password
+        Test api returns correct error code and error message on attempt to
+        register user with no password
         : return STATUS CODE 400 Bad Request
         """
         self.client = self.app.test_client()
@@ -70,6 +70,8 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.null_password_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["error"] == "Password cannot be empty")
         self.assertEqual(response.status_code, 400)
 
     def test_api_return_error_malformed_email(self):
