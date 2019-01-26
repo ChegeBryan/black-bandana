@@ -146,5 +146,5 @@ class UserAPITestCase(BaseTestData):
             json=self.password_length_holder
         )
         json_data = response.get_json()
-        self.assertTrue(json_data["error"] == "Password must be between 8 to 16 characters")
+        self.assertTrue(json_data["error"] == "Password must be between 8 to 16 characters inclusive")
         self.assertEqual(response.status_code, 400)
