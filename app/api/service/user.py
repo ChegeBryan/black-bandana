@@ -63,7 +63,9 @@ def save_new_user(data):
             }
             return response_object, 201
         else:
-            pass
+            return {
+                "error": "Try a different email and username combination",
+            }, 409
 
 
 def save_changes(data):
