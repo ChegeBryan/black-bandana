@@ -76,8 +76,8 @@ class UserAPITestCase(BaseTestData):
 
     def test_api_return_error_malformed_email(self):
         """
-        Test api returns correct error code on attempt to register
-        user with an invalid email format
+        Test api returns correct error code and response message on attempt to
+        register user with an invalid email format
         : return STATUS CODE 400 Bad Request
         """
         self.client = self.app.test_client()
@@ -85,6 +85,8 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.malformed_email_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["error"] == "Invalid email format")
         self.assertEqual(response.status_code, 400)
 
     def test_api_return_error_null_email(self):
