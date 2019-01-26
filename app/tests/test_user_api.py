@@ -115,6 +115,8 @@ class UserAPITestCase(BaseTestData):
             '/api/v1/users',
             json=self.null_user_entries_holder
         )
+        json_data = response.get_json()
+        self.assertTrue(json_data["error"] == "No user entries are empty")
         self.assertEqual(response.status_code, 400)
 
     def test_api_return_error_int_user_name(self):
