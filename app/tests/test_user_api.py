@@ -104,21 +104,6 @@ class UserAPITestCase(BaseTestData):
         self.assertTrue(json_data["error"] == "Email cannot be empty")
         self.assertEqual(response.status_code, 400)
 
-    def test_api_return_error_null_user_entries(self):
-        """
-        Test api returns correct error code on attempt to register
-        user with empty username, email and password fields
-        : return STATUS CODE 400 Bad Request
-        """
-        self.client = self.app.test_client()
-        response = self.client.post(
-            '/api/v1/users',
-            json=self.null_user_entries_holder
-        )
-        json_data = response.get_json()
-        self.assertTrue(json_data["error"] == "No user entries are empty")
-        self.assertEqual(response.status_code, 400)
-
     def test_api_return_error_int_user_name(self):
         """
         Test api returns correct error code and error message on attempt to
