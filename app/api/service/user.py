@@ -10,7 +10,7 @@ def save_new_user(data):
     """
     Save new user function
     """
-    username =  data['user_name']
+    username = data['user_name']
     user_email = data['user_email']
     password = data['password']
 
@@ -39,22 +39,31 @@ def save_new_user(data):
         return {
             "error": "Invalid email format"
         }, 400
-    elif not  (8 <= len(password) <= 16):
+    elif not (8 <= len(password) <= 16):
         return {
             "error": "Password must be between 8 to 16 characters inclusive"
         }, 400
     else:
-        new_user = User(
-            user_name=username,
-            user_email=user_email,
-            password=User.generate_password_hash(password)
-        )
-        save_changes(new_user)
-        response_object = {
-            "message": "Successfully registered!",
-            "user": new_user.display_user_holder()
-        }
-        return response_object, 201
+        # populate user variable if a user exists by that username or email
+        # address
+        username_found = User.get_user_by_username(username)
+        user_email_found = User.get_user_by_email(user_email)
+
+        # check if user exists before saving
+        if username_found is None and user_email_found is None:
+            new_user = User(
+                user_name=username,
+                user_email=user_email,
+                password=User.generate_password_hash(password)
+            )
+            save_changes(new_user)
+            response_object = {
+                "message": "Successfully registered!",
+                "user": new_user.display_user_holder()
+            }
+            return response_object, 201
+        else:
+            pass
 
 
 def save_changes(data):
