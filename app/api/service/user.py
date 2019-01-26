@@ -8,22 +8,29 @@ def save_new_user(data):
     """
     Save new user function
     """
-    username =  data['user_name']
-    user_email = data['user_email']
+    username =  data['user_name'],
+    user_email = data['user_email'],
     password = data['password']
 
-    new_user = User(
-        user_name=username,
-        user_email=user_email,
-        password=password
-    )
-
-    save_changes(new_user)
-    response_object = {
-        "message": "Successfully registered!",
-        "user": new_user.display_user_holder()
-    }
-    return response_object, 201
+    # check if the data provided in the payload is valid
+    # 1. Check if username, email, password is provided and return relevant errors on encounter with errors
+    # 2. Check if the username, email, password are valid when provided
+    if "user_name" in data and not data["user_name"].strip():
+        return {
+            'error': 'Username cannot be empty'
+        }, 400
+    else:
+        new_user = User(
+            user_name=username,
+            user_email=user_email,
+            password=password
+        )
+        save_changes(new_user)
+        response_object = {
+            "message": "Successfully registered!",
+            "user": new_user.display_user_holder()
+        }
+        return response_object, 201
 
 
 def save_changes(data):
