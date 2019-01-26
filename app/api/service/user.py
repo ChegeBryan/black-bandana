@@ -39,6 +39,10 @@ def save_new_user(data):
         return {
             "error": "Invalid email format"
         }, 400
+    elif not  (8 <= len(password) <= 16):
+        return {
+            "error": "Password must be between 8 to 16 characters inclusive"
+        }, 400
     else:
         new_user = User(
             user_name=username,
