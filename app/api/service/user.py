@@ -47,7 +47,7 @@ def save_new_user(data):
         new_user = User(
             user_name=username,
             user_email=user_email,
-            password=password
+            password=User.generate_password_hash(password)
         )
         save_changes(new_user)
         response_object = {
