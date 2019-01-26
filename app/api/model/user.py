@@ -42,3 +42,11 @@ class User:
             user = user.display_user_holder()
             if user["user_name"] == user_name:
                 return user
+
+    @classmethod
+    def get_user_by_email(cls, user_email):
+        """ Method to get a user in the USER lIST by email """
+        for user in MockDB.USERS:
+            user = user.display_user_holder()
+            if user["user_email"] == user_email:
+                return user
